@@ -1,0 +1,24 @@
+.product .btn {
+    transition: transform 0.5s, opacity 1s;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.product:hover{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: none;
+}
+.red_heart{
+    position: absolute;
+    z-index: 15;
+    right: 0;
+    transform: translateX(175%)!important;
+}
+.product:hover .btn {
+    opacity: 1;
+    transform: translateY(0%)
+}

@@ -1,0 +1,11 @@
+<div class="container mt-5 pt-5">
+    <div class="search-container d-flex justify-content-center">
+        <label  class="m-3 ps-3" for="Search">Search by Name</label>
+        <input [(ngModel)]="searchToken" type="text" id="Search" class="form-control w-75">
+    </div>
+    <div class="row">
+        <div class="col-md-3 customShadow my-4" *ngFor="let product of allProducts | searchPipe :searchToken">
+            <app-product-item [wishlistData]="wishlistData" [product]="product" ></app-product-item>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+.forget:hover{
+    color: #198754 !important;
+}
+.forget{
+    transition: all .2s ease-in-out;
+}

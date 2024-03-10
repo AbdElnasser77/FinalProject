@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+.customShadow:hover {
+    -webkit-box-shadow: 0px 0px 10px 2px rgba(17, 143, 68, 0.75);
+    -moz-box-shadow: 0px 0px 10px 2px rgba(17, 143, 68, 0.75);
+    box-shadow: 0px 0px 10px 2px rgba(17, 143, 68, 0.75);
+
+}
+
+.customShadow {
+    transition: all 0.4s;
+}

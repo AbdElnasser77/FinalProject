@@ -1,0 +1,18 @@
+<div class="container w-75 bg-body-tertiary py-5">
+    <div class="w-50 m-auto py-5">
+        <form [formGroup]="payment" (ngSubmit)="onlinepayment()">
+            <label for="details">Details</label>
+            <input type="text" class="form-control mb-3" id="details" formControlName="details">
+
+            <label for="Phone">Phone</label>
+            <input type="tel" class="form-control mb-3" id="phone" formControlName="phone">
+
+            <label for="city">City</label>
+            <input type="text" class="form-control mb-3" id="city" formControlName="city">
+
+            <button class="btn btn-success py-3 w-50 d-block m-auto mt-5" >Pay</button>
+        </form>
+
+    </div>
+
+</div>

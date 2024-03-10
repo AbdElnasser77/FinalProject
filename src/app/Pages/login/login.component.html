@@ -1,0 +1,35 @@
+<div class="container pt-5 mt-5">
+    <div class="w-75 m-auto">
+        <h1 class="fw-bold mb-4">Login </h1>
+
+        <form [formGroup]="loginForm" (ngSubmit)="login(loginForm)">
+            <div class="alert alert-danger" *ngIf="apiError">
+                {{apiError}}
+            </div>
+            <div class="form-group mb-3">
+                <label for="email" class="fs-5">Email : </label>
+                <input formControlName="email" id="email" type="text" class="form-control">
+                <div class="alert alert-danger" *ngIf="loginForm.get('email')?.errors && loginForm.get('email')?.touched">
+                    <p *ngIf="loginForm.get('email')?.getError('required')" class="m-0">Required</p>
+                    <p *ngIf="loginForm.get('email')?.getError('email')" class="m-0">Email not Valid</p>
+                </div>
+            </div>
+    
+            <div  class="form-group mb-3">
+                <label for="password" class="fs-5 my-2">Password : </label>
+                <input formControlName="password" id="password" type="password" class="form-control ">
+                <div class="alert alert-danger" *ngIf="loginForm.get('password')?.errors && loginForm.get('password')?.touched">
+                    <p *ngIf="loginForm.get('password')?.getError('required')" class="m-0">Required</p>
+                    <p *ngIf="loginForm.get('password')?.getError('pattern')" class="m-0">Password is not Valid</p>
+                </div>
+            </div>
+    
+            <a class="fs-5 mt-5 text-decoration-none text-black forget" [routerLink]="'/forgetPassword'">forget your password ?</a>
+            
+            <button class="btn btn-success btn-lg  text-white float-end ">
+                <i *ngIf="isLoading" class="fa fa-spinner fa-spin"></i>
+                <span *ngIf="!isLoading">login now</span>
+            </button>
+        </form>
+    </div>
+</div>
